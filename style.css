@@ -9,11 +9,25 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 	margin: 0;
 	padding: 0;
 }
+@-webkit-keyframes rain {
+	0% {
+		top :0;
 
-span {
+	}
+	100% {
+		top:100%;
+	}
+}
+
+
+span.billsBillsBills {
+	top: 0px;
 	background: green;
-	display: inline-block;
+	padding: 5px;
+	display: block;
 	position: absolute;
 	z-index: 100;
+	-webkit-animation: rain 30s linear;
 }
+
 
