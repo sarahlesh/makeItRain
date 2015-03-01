@@ -22,7 +22,7 @@ $.fn.makeItRain = function(){
 				"-webkit-animation-duration" : randomSpeed + "s"
 			});
 
-			$(bills).prepend('<img src="images/fullbill.svg" alt="a dollar bill">');
+			$(bills).prepend('<img src="images/bill.svg" alt="a dollar bill">');
 
 
 			$('body').append(bills);
