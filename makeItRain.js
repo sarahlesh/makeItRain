@@ -1,36 +1,38 @@
 $.fn.makeItRain = function(){
 
-	$(this).on('click',function(){
+		$(this).on('click',function(){
 
-		var maxBills = 100;
-
-
-		for (var i = 0; i < maxBills; i++){
-
-		var randomNumber = Math.floor(Math.random()*1500);
-		var randomPosition = Math.floor(Math.random()*100) + 25;
-		var randomTime = Math.random() * 20;
-		var randomSpeed = (Math.random()*20)+10 ;
+			var maxBills = 50;
 
 
+			for (var i = 0; i < maxBills; i++){
 
-		var bills = $("<span class='billsBillsBills'>")
-			.css({
-				left : randomNumber,
-				top: '-150px',
-				"-webkit-animation-delay" : randomTime + "s",
-				"-webkit-animation-duration" : randomSpeed + "s"
-			});
+			var random = $(window).width();
 
-			$(bills).prepend('<img src="images/bill.svg" alt="a dollar bill">');
+			var randomPosition = Math.floor(random*Math.random());
+
+			var randomTime = Math.random() * 20;
+			var randomSpeed = (Math.random()*20)+10 ;
 
 
-			$('body').append(bills);
+			var bills = $("<span class='billsBillsBills'>")
+				.css({
+					left : randomPosition,
+					top: '-150px',
+					"-webkit-animation-delay" : randomTime + "s",
+					"-webkit-animation-duration" : randomSpeed + "s"
+				});
 
-		}; // end click function
+				$(bills).prepend('<img src="images/bill.svg" alt="a dollar bill">');
 
-	}); //end for loop
 
-}; //end make it rain fn.
+				$('body').append(bills);
 
-// thanks to Anisha Varghese from the Noun Project for the SVG!!
+			}; // end click function
+
+		}); //end for loop
+
+	}; //end make it rain fn.
+
+	// thanks to Anisha Varghese from the Noun Project for the SVG!!
+
